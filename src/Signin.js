@@ -74,14 +74,15 @@ export default function Signin() {
       posId,
       version
     });
-    console.log(username);
-    console.log(response);
-    if(username == "dev1"){
+    if('username' == "dev1"){
       window.location.href = "/profile";
     }
-  
+    console.log(username);
+    console.log(response);
+    console.log('token');
+    console.log('username');
   }
-
+  
   return (
     <Grid container className={classes.root}>
       <CssBaseline />
