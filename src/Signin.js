@@ -44,6 +44,7 @@ async function loginUser(credentials) {
     method: 'post',
     url: 'https://tccposbackendgatewaywebapidev.azurewebsites.net/security/api/v1/Login',
     headers: { 
+      'accept': 'text/plain', 
       'Content-Type': 'application/json', 
       'Cookie': 'ARRAffinity=47baf52a88e88f72ed797be2c0d776311125fc4cef74bc3d614ee8918a17df2e; ARRAffinitySameSite=47baf52a88e88f72ed797be2c0d776311125fc4cef74bc3d614ee8918a17df2e'
     },
