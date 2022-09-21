@@ -46,7 +46,6 @@ async function loginUser(credentials) {
     headers: { 
       'accept': 'text/plain', 
       'Content-Type': 'application/json', 
-      'Cookie': 'ARRAffinity=47baf52a88e88f72ed797be2c0d776311125fc4cef74bc3d614ee8918a17df2e; ARRAffinitySameSite=47baf52a88e88f72ed797be2c0d776311125fc4cef74bc3d614ee8918a17df2e'
     },
     data : data
   };
@@ -58,7 +57,7 @@ async function loginUser(credentials) {
   .catch(function (error) {
     console.log(error);
   });
-  return response;
+  return config;
 }
 
 export default function Signin() {
@@ -75,14 +74,13 @@ export default function Signin() {
       posId,
       version
     });
+    console.log(response);
     if('username' == "dev1"){
       window.location.href = "/profile";
     }
-    console.log(username);
-    console.log(response);
-    console.log('token');
-    console.log('username');
+  
   }
+  
   
   return (
     <Grid container className={classes.root}>
